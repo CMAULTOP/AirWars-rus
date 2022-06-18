@@ -4,7 +4,7 @@ function PANEL:Init()
 	self:SetTall(32)
 
 	self.button = self:Add("DButton")
-	self.button:SetText("Join")
+	self.button:SetText("Зайти")
 	self.button:SetTextColor(Color(255, 255, 255))
 	self.button:SetFont("Trebuchet18")
 	self.button:Dock(RIGHT)

@@ -16,18 +16,18 @@ hook.Add("Think", "Check Winners", function()
 		AirWars:ResetRound()
 		for _, ply in pairs(player.GetAll()) do
 			ply:AddPoints(2)
-			ply:ChatPrint("You got 2 points for playing")
+			ply:ChatPrint("Вы получили 2 очка за игру")
 		end
 		for _, team in pairs(winners) do
 			for _, ply in pairs(player.GetAll()) do
-				ply:ChatPrint("Winners:")
+				ply:ChatPrint("Победители:")
 			end
 			for _, winner in pairs(team) do
 				for _, ply in pairs(player.GetAll()) do
 					ply:ChatPrint("	"..winner:Name())
 				end
 				winner:AddPoints(10)
-				winner:ChatPrint("You got 10 points for winning this round")
+				winner:ChatPrint("Вы получили 10 очков за победу в этом раунде")
 			end
 		end
 		hook.Run("AirWars_RoundEnd", winners)

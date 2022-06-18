@@ -52,7 +52,7 @@ local function save_flag(flag)
 	team_name:Dock(TOP)
 
 	local save = frame:Add("AWButton")
-	save:SetText( "Save" )
+	save:SetText( "Сохранить" )
 	save:Dock(BOTTOM)
 	save.DoClick = function()
 		if !file.Exists("aw_sprites", "DATA") then
@@ -68,7 +68,7 @@ function open_paint_menu()
 	local res = 32
 
 	local frame = vgui.Create("DFrame")
-	frame:SetText("Paint")
+	frame:SetText("Рисовать")
 	frame:SetSize(700, 545)
 	frame:Center()
 	frame:ShowCloseButton(true)
@@ -139,7 +139,7 @@ function open_paint_menu()
 	local fill = right_panel:Add( "DButton" )
 	fill:SetTall(30)
 	fill:Dock(TOP)
-	fill:SetText("Fill")
+	fill:SetText("Заполнить")
 	function fill:DoClick()
 		for i=1, res*res do
 			frame.flag[i] = frame.color
@@ -149,7 +149,7 @@ function open_paint_menu()
 	local save = right_panel:Add( "DButton" )
 	save:SetTall(30)
 	save:Dock(BOTTOM)
-	save:SetText("Save")
+	save:SetText("Сохранить")
 	function save:DoClick()
 		save_flag(frame.flag)
 	end

@@ -1,7 +1,7 @@
 function teams_menu_update(frame)
 	for id, team in pairs(game_state.teams) do
 		if id == LocalPlayer():GetAWTeam() then continue end
-		local send_request = frame.teams_menu.teams_list:AddButton(team.name, "Join")
+		local send_request = frame.teams_menu.teams_list:AddButton(team.name, "Войти")
 
 		local flag = send_request:Add("DPanel")
 		flag:SetWide(32)
@@ -23,7 +23,7 @@ function teams_menu_update(frame)
 
 	for k, v in pairs(player.GetAll()) do
 		if v:GetAWTeam() != LocalPlayer():GetAWTeam() then continue end
-		local send_request = frame.teams_menu.member_list:AddButton(v:Name(), "Kick")
+		local send_request = frame.teams_menu.member_list:AddButton(v:Name(), "Кикнуть")
 		send_request.DoClick = function()
 			net.Start("aw_team_kick_player")
 			net.WriteEntity(v)
@@ -55,7 +55,7 @@ function name_change_menu()
 
 	local team_name = frame:Add( "DTextEntry" )
 	team_name:SetTall( 30 )
-	team_name:SetText( "Team Name" )
+	team_name:SetText( "Название команды" )
 	team_name:Dock(TOP)
 
 	local create_team = frame:Add("AWButton")
@@ -81,7 +81,7 @@ function open_teams_menu(sheet, frame)
 	end
 	if LocalPlayer():IsLeader() then
 		frame.teams_menu.team_name = frame.teams_menu:Add("AWButton")
-		frame.teams_menu.team_name:SetText( "Change Name" )
+		frame.teams_menu.team_name:SetText( "Изменить Имя" )
 		frame.teams_menu.team_name:Dock(BOTTOM)
 		frame.teams_menu.team_name:DockMargin(5, 5, 5, 5)
 		frame.teams_menu.team_name:SetTextColor(Color(0, 0, 0))
@@ -92,7 +92,7 @@ function open_teams_menu(sheet, frame)
 	end
 
 	local open_paint = frame.teams_menu:Add("AWButton")
-	open_paint:SetText( "Draw Flag" )
+	open_paint:SetText( "Нарисуйте Флаг" )
 	open_paint:Dock(BOTTOM)
 	open_paint:DockMargin(5, 5, 5, 5)
 	open_paint:SetTextColor(Color(0, 0, 0))
@@ -103,7 +103,7 @@ function open_teams_menu(sheet, frame)
 
 
 	local team_name_label = frame.teams_menu:Add("AWButton")
-	team_name_label:SetText( "Leave Team" )
+	team_name_label:SetText( "Покинуть команду" )
 	team_name_label:Dock(BOTTOM)
 	team_name_label:DockMargin(5, 5, 5, 5)
 	team_name_label:SetTextColor(Color(0, 0, 0))
@@ -142,7 +142,7 @@ net.Receive("aw_team_request", function()
 
 	local description = frame:Add( "DLabel" )
 	description:SetTall( 30 )
-	description:SetText( "Player "..applicant_player:Name().." wants to join your team." )
+	description:SetText( "Игрок "..applicant_player:Name().." хочет присоединиться к вашей команде." )
 	description:SetTextColor(Color(255, 255, 255))
 	description:SetFont("Trebuchet24")
 	description:Dock(TOP)
@@ -153,7 +153,7 @@ net.Receive("aw_team_request", function()
 	bottom_panel:Dock(BOTTOM)
 
 	local accept = bottom_panel:Add("AWButton")
-	accept:SetText( "Accept" )
+	accept:SetText( "Принять" )
 	accept:Dock(LEFT)
 	accept:SetWide(150)
 	accept:SetColor(Color(50, 80, 50))
@@ -165,7 +165,7 @@ net.Receive("aw_team_request", function()
 	end
 
 	local deny = bottom_panel:Add("AWButton")
-	deny:SetText( "Deny" )
+	deny:SetText( "Отклонить" )
 	deny:Dock(RIGHT)
 	deny:SetWide(150)
 	deny:SetColor(Color(80, 50, 50))

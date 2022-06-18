@@ -3,9 +3,9 @@ local tips_offset = 10
 local gear_icon = Material("aw_icons/gear.png")
 
 local states = {}
-states[GAME_STATE_PAUSE] = "PAUSE"
-states[GAME_STATE_FIGHT] = "FIGHT!"
-states[GAME_STATE_BUILDING] = "BUILD"
+states[GAME_STATE_PAUSE] = "ПАУЗА"
+states[GAME_STATE_FIGHT] = "БИТВА!"
+states[GAME_STATE_BUILDING] = "СТРОЙКА"
 
 function GM:HUDDrawTargetID()
 
@@ -75,7 +75,7 @@ hook.Add( "HUDPaint", "Draw HUD", function()
 
 	if height < 5 then
 		if game_state_get_state() != GAME_STATE_FIGHT then
-			draw.SimpleTextOutlined( "Your height is too low. Place more balloons", "aw_hud_main", padding_x, padding_y - 230, Color(255, 0, 0), TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP, 1)
+			draw.SimpleTextOutlined( "Ваш рост слишком низок. Разместите больше воздушных шаров", "aw_hud_main", padding_x, padding_y - 230, Color(255, 0, 0), TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP, 1)
 		end
 	end
 end )
@@ -84,12 +84,12 @@ hook.Add( "HUDPaint", "Draw Controls", function()
 	if !LocalPlayer():IsInControl() then return end
 	local entity_under_control = LocalPlayer():GetNWEntity("aw_entity_under_control")
 	if entity_under_control:GetClass() != "aw_ship_controller" then return end
-	draw_key(10, tips_offset,  string.upper( input.LookupBinding( "+forward" ) ),  "Forward", false)
-	draw_key(10, tips_offset,  string.upper( input.LookupBinding( "+moveleft" ) ),  "Turn Left", false)
-	draw_key(10, tips_offset,  string.upper( input.LookupBinding( "+back" ) ),  "Back", false)
-	draw_key(10, tips_offset,  string.upper( input.LookupBinding( "+moveright" ) ),  "Turn Right", false)
-	draw_key(10, tips_offset,  string.upper( input.LookupBinding( "+jump" ) ),  "Go Up", false, 100)
-	draw_key(10, tips_offset,  string.upper( input.LookupBinding( "+speed" ) ),  "Go Down", false, 100)
+	draw_key(10, tips_offset,  string.upper( input.LookupBinding( "+forward" ) ),  "Вперед", false)
+	draw_key(10, tips_offset,  string.upper( input.LookupBinding( "+moveleft" ) ),  "повернуть налево", false)
+	draw_key(10, tips_offset,  string.upper( input.LookupBinding( "+back" ) ),  "Назад", false)
+	draw_key(10, tips_offset,  string.upper( input.LookupBinding( "+moveright" ) ),  "поверните направо", false)
+	draw_key(10, tips_offset,  string.upper( input.LookupBinding( "+jump" ) ),  "Подниматься", false, 100)
+	draw_key(10, tips_offset,  string.upper( input.LookupBinding( "+speed" ) ),  "Опускаться", false, 100)
 
 	local height = 0
 	tips_offset = 10
@@ -97,13 +97,13 @@ hook.Add( "HUDPaint", "Draw Controls", function()
 		height = world_ships[LocalPlayer():GetCurrentShip()].position.z
 	end
 
-	draw.SimpleTextOutlined("Height: "..math.Round(height / 50), "DermaLarge", 10, ScrH() - 300, Color(255, 255, 255), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER, 1, Color(0, 0, 0))
+	draw.SimpleTextOutlined("Высота: "..math.Round(height / 50), "DermaLarge", 10, ScrH() - 300, Color(255, 255, 255), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER, 1, Color(0, 0, 0))
 end )
 
 hook.Add( "HUDPaint", "Draw Exit", function()
 	if !LocalPlayer():IsInControl() then return end
 	tips_offset = 10
-	draw_key(10, tips_offset,  string.upper( input.LookupBinding( "+reload" ) ),  "Exit", false)
+	draw_key(10, tips_offset,  string.upper( input.LookupBinding( "+reload" ) ),  "Выход", false)
 end )
 
 hook.Add( "HUDPaint", "HightlightUse", function()

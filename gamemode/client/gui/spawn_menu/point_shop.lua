@@ -15,13 +15,13 @@ function open_point_shop(sheet, frame)
 	frame.point_shop.player:Dock(RIGHT)
 
 	frame.point_shop.points = frame.point_shop.player:Add( "DLabel" )
-	frame.point_shop.points:SetText( "Points: "..LocalPlayer():GetPoints() )
+	frame.point_shop.points:SetText( "Пойнты: "..LocalPlayer():GetPoints() )
 	frame.point_shop.points:Dock(TOP)
 	frame.point_shop.points:SetFont("aw_hud_small")
 	frame.point_shop.points:DockMargin(5, 5, 5, 5)
 	frame.point_shop.points:SetTextColor(Color(255, 255, 255))
 	function frame.point_shop.points:UpdateLabel()
-		self:SetText( "Points: "..LocalPlayer():GetPoints() )
+		self:SetText( "Пойнты: "..LocalPlayer():GetPoints() )
 	end
 
 	local list = frame.point_shop:Add("DCategoryList")

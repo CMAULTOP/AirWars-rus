@@ -248,7 +248,7 @@ global_config.categories[CATEGORY_SPECIALS].name = "Specials"
 global_config.categories[CATEGORY_SPECIALS].props = {
 	// Specials
 	{
-		name = "Steering Wheel",
+		name = "Рулевое колесо",
 		model = "models/aw_steering_wheel/aw_steering_wheel.mdl",
 		entity = "aw_ship_controller",
 		info = {
@@ -258,7 +258,7 @@ global_config.categories[CATEGORY_SPECIALS].props = {
 		},
 	},
 	{
-		name = "Sail",
+		name = "Парус",
 		model = "models/aw_sail/aw_sail.mdl",
 		info = {
 			weight = 20,
@@ -272,7 +272,7 @@ global_config.categories[CATEGORY_SPECIALS].props = {
 		},
 	},
 	{
-		name = "Small Balloon",
+		name = "Маленький воздушный шар",
 		model = "models/aw_balloon_small/aw_balloon_small.mdl",
 		entity = "aw_engine",
 		info = {
@@ -287,7 +287,7 @@ global_config.categories[CATEGORY_SPECIALS].props = {
 		},
 	},
 	{
-		name = "Balloon",
+		name = "Воздушный шар",
 		model = "models/aw_balloon_big/aw_balloon_big.mdl",
 		entity = "aw_engine",
 		info = {
@@ -302,7 +302,7 @@ global_config.categories[CATEGORY_SPECIALS].props = {
 		},
 	},
 	{
-		name = "Player Spawn",
+		name = "Спавн игрока",
 		model = "models/aw_player_spawn/aw_player_spawn.mdl",
 		entity = "aw_player_spawn",
 		info = {
@@ -312,7 +312,7 @@ global_config.categories[CATEGORY_SPECIALS].props = {
 		},
 	},
 	{
-		name = "Ammunition Storage",
+		name = "Склад боеприпасов",
 		model = "models/aw_ammunition_crate/aw_ammunition_crate.mdl",
 		entity = "aw_ammunition_storage",
 		info = {
@@ -322,7 +322,7 @@ global_config.categories[CATEGORY_SPECIALS].props = {
 		},
 	},
 	{
-		name = "Speaker",
+		name = "Оратор",
 		model = "models/aw_speaker/aw_speaker.mdl",
 		entity = "aw_speaker",
 		info = {
@@ -337,7 +337,7 @@ global_config.categories[CATEGORY_WEAPONS].name = "Weapons"
 global_config.categories[CATEGORY_WEAPONS].props = {
 	// Weapons
 	{
-		name = "Cannon",
+		name = "Пушка",
 		model = "models/aw_cannon/aw_cannon_full.mdl",
 		entity = "aw_weapon_cannon",
 		info = {
@@ -355,7 +355,7 @@ global_config.categories[CATEGORY_WEAPONS].props = {
 		category = CATEGORY_WEAPONS
 	},
 	{
-		name = "Rifle",
+		name = "Винтовка",
 		model = "models/aw_rifle/aw_rifle_full.mdl",
 		entity = "aw_weapon_rifle",
 		info = {
@@ -373,7 +373,7 @@ global_config.categories[CATEGORY_WEAPONS].props = {
 		category = CATEGORY_WEAPONS
 	},
 	{
-		name = "Grappling Hook",
+		name = "Захватный крюк",
 		model = "models/aw_hook/aw_hook_full.mdl",
 		entity = "aw_weapon_hook",
 		info = {
@@ -391,7 +391,7 @@ global_config.categories[CATEGORY_WEAPONS].props = {
 		category = CATEGORY_WEAPONS
 	},
 	{
-		name = "Bomb",
+		name = "Бомба",
 		model = "models/aw_bomb/aw_bomb.mdl",
 		entity = "aw_weapon_bomb",
 		info = {
