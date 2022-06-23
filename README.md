@@ -1,14 +1,13 @@
+Переведено CMAUL и Яндекс.Переводчик
+
 # AirWars
-Airwars is a unique gamemode where you can build your own steampunk ship and fight with other players.
+Air wars - это уникальный игровой режим, в котором вы можете построить свой собственный стимпанк-корабль и сражаться с другими игроками.
 
-Gamemode includes:
-- Own soundtrack
-- Characted customization system
-- Big battles up to 15 ships on the field(Maybe even more!)
-- No problems with game physics
-- Destructible ship system
-- Great visuals
-- Ability to draw your own flags
-
-# For server owners
-This gamemode is really CPU unfriendly. You better go with 4 GHz CPU, or at least 3.6.
+Игровой режим включает в себя:
+- Собственный саундтрек
+- Система настройки персонажа
+- Большие сражения до 15 кораблей на поле (может быть, даже больше!)
+- Никаких проблем с игровой физикой
+- Разрушаемая система кораблей
+- Отличные визуальные эффекты
+- Возможность рисовать свои собственные флаги
